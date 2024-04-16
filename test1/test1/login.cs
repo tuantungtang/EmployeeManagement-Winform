@@ -55,7 +55,11 @@ namespace test1
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-
+            DialogResult dr = MessageBox.Show("Are you sure?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
